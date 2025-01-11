@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GVPCEW CSE (AI-ML) Branch</title>
+  <link rel="stylesheet" href="csm_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="dropdown.css">
+</head>
+<body>
+
+  <!-- Header with College Logo and Title -->
+  <header class="header">
+<div class="circular-image">
+      <img src="C:\Users\Lenovo\Desktop\webdev\logo.JPG" alt="GVPCEW Logo" class="logo">
+   </div>
+<div class="college-title">
+    <h1>Gayatri Vidya Parishad College Of Engineering For Women</h1>
+    <h2>(Autonomous)</h2>
+    <h3>Kommadi, Madhurawada, Visakhapatnam-530048</h3>
+  </div>
+<div class="accreditations">
+  <img src="C:\Users\Lenovo\Desktop\webdev\nba.png" alt="NBA Accredited" class="accreditation-logo" />
+  <img src="C:\Users\Lenovo\Desktop\webdev\naac.jpg" alt="NAAC Accredited" class="accreditation-logo" />
+  <div class="acircular-image">
+    <img src="C:\Users\Lenovo\Desktop\webdev\aicte.jpg" alt="AICTE Approved" class="accreditation-logo" />
+  </div>
+</div>
+       
+  </header>
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <ul>
+      <li><a href="C:\Users\Lenovo\Desktop\webdev\csm.html" onclick="showPage('home')"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="C:\Users\Lenovo\Desktop\webdev\aimers_members.html" onclick="showPage('members')"><i class="fas fa-users"></i> Members</a></li>
+      <li><a href="C:\Users\Lenovo\Desktop\webdev\events.html" onclick="showPage('events')"><i class="fas fa-book-open"></i> Events</a></li>
+      <li><a href="#contact" onclick="showPage('contact')"><i class="fas fa-envelope"></i> Contact Us</a></li>
+    </ul>
+  </nav>
+<style>
+/* Basic styling for slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  height: 100vh;
+  overflow: hidden;
+margin: 0 auto; 
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
+  height: 80%;
+margin: 0 auto; 
+}
+
+/* Animation effects */
+.fade {
+  animation: fadeEffect 1s;
+}
+
+.slide {
+  animation: slideEffect 1s;
+}
+
+.zoom {
+  animation: zoomEffect 1s;
+}
+
+/* Keyframes for transitions */
+@keyframes fadeEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideEffect {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes zoomEffect {
+  from { transform: scale(1.2); }
+  to { transform: scale(1); }
+}
+
+/* Dots styling */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+</style>
+
+  <!-- Slideshow Container -->
+  <div class="slideshow-container">
+    <!-- Slide 1 -->
+    <div class="slide">
+      <div class="member">
+        <img src="C:\Users\Lenovo\Desktop\webdev\president.jpg" alt="Member 1">
+        <h3>SWAPNA DANDE</h3>
+        <p>President</p>
+      </div>
+      <div class="member">
+        <img src="C:\Users\Lenovo\Desktop\webdev\prashanthi.jpg" alt="Member 2">
+        <h3>MALLIPEDDI PRASANTHI</h3>
+        <p>Vice President</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <div class="member">
+        <img src="C:\Users\Lenovo\Desktop\webdev\meenakshi.jpg" alt="Member 3">
+        <h3>CHINTAPALLI MEENAKSHI</h3>
+        <p>Treasurer</p>
+      </div>
+      <div class="member">
+        <img src="C:\Users\Lenovo\Desktop\webdev\nandini.jpg" alt="Member 4">
+        <h3>G.S.S NANDINI</h3>
+        <p>Tech Innovator</p>
+      </div>
+    </div>
+    
+    <!-- Add more slides as needed -->
+
+    <!-- Navigation buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+</section>
+
+
+  <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  const slides = document.getElementsByClassName("mySlides");
+  const dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    slides[i].classList.remove("fade", "slide", "zoom"); // Clear any previous animations
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].classList.add("slidea"); // Set desired transition type here
+  dots[slideIndex - 1].className += " active";
+}
+
+// Automatic slideshow
+setInterval(() => { plusSlides(1); }, 5000); // Change every 5 seconds
+</script>
+
+</body>
+</html>

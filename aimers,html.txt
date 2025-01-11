@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GVPCEW CSE (AI-ML) Branch</title>
+  <link rel="stylesheet" href="csm_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header with College Logo and Title -->
+  <header class="header">
+<div class="circular-image">
+      <img src="C:\Users\Lenovo\Desktop\webdev\aimers.jpg" alt="GVPCEW Logo" class="logo">
+   </div>
+<h1>Gayatri Vidya Parishad College Of Engineering For Women</h1>
+<div class="accreditations">
+        <span>NBA Accredited</span> | 
+        <span>NAAC A+</span> | 
+        <span>AICTE Approved</span>
+      </div>
+                    
+  </header>
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <ul>
+      <li><a href="#home" onclick="showPage('home')"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#members" onclick="showPage('members')"><i class="fas fa-users"></i> Members</a></li>
+      <li><a href="#events" onclick="showPage('events')"><i class="fas fa-book-open"></i> Events</a></li>
+      <li><a href="#contact" onclick="showPage('contact')"><i class="fas fa-envelope"></i> Contact Us</a></li>
+    </ul>
+  </nav>
+
+    

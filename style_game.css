@@ -1,0 +1,189 @@
+/* styles.css */
+.page {
+    text-align: center;
+    padding: 20px;
+}
+
+#home-page {
+    background-color: #f0f8ff;  /* Light blue for home page */
+}
+
+#game-page {
+    background-color: #e6e6fa;  /* Lavender background for game page */
+}
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+.home-container {
+  text-align: center;
+  max-width: 600px;
+  padding: 40px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.intro {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+#start-btn {
+  padding: 15px 30px;
+  background-color: #28a745;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s ease;
+}
+
+#start-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.game-container {
+  text-align: center;
+  max-width: 600px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+#question {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+#answer-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+/* styles.css */
+
+/* General answer button styling */
+.answer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+  background-color: #FFFFFF;
+  color: black;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Hover effect for answer button */
+.answer-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+  border-color: #0056b3;
+}
+
+/* Selected answer style */
+.answer-button.selected {
+  background-color: #800080; /* Green to indicate it's selected */
+  border-color: #800080;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(33, 136, 56, 0.3);
+}
+
+/* Adding checkmark for the selected answer */
+.answer-button.selected::after {
+  content: "✓";
+  font-size: 1.5rem;
+  color: white;
+  position: absolute;
+  right: 20px; /* Position checkmark on the right */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Slight inner shadow for depth */
+.answer-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.answer-button:hover::before,
+.answer-button.selected::before {
+  opacity: 1;
+}
+
+
+#feedback {
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+#feedback.correct {
+  color: green;
+}
+
+#feedback.wrong {
+  color: red;
+}
+
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #6a5acd; /* Slate Blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #483d8b; /* Darker Blue */
+}
+
+button.selected {
+  background-color: #32cd32; /* Green when selected */
+}
+
+#next-btn {
+  background-color: #32cd32; /* Green for Next button */
+}
+
+#next-btn:hover {
+  background-color: #228b22; /* Darker green */
+}

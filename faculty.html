@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GVPCEW CSE (AI-ML) Branch</title>
+  <link rel="stylesheet" href="csm_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="dropdown.css">
+</head>
+<body>
+
+  <!-- Header with College Logo and Title -->
+  <header class="header">
+<div class="circular-image">
+      <img src="C:\Users\Lenovo\Desktop\webdev\logo.JPG" alt="GVPCEW Logo" class="logo">
+   </div>
+<div class="college-title">
+    <h1>Gayatri Vidya Parishad College Of Engineering For Women</h1>
+    <h2>(Autonomous)</h2>
+    <h3>Kommadi, Madhurawada, Visakhapatnam-530048</h3>
+  </div>
+<div class="accreditations">
+  <img src="C:\Users\Lenovo\Desktop\webdev\nba.png" alt="NBA Accredited" class="accreditation-logo" />
+  <img src="C:\Users\Lenovo\Desktop\webdev\naac.jpg" alt="NAAC Accredited" class="accreditation-logo" />
+  <div class="acircular-image">
+    <img src="C:\Users\Lenovo\Desktop\webdev\aicte.jpg" alt="AICTE Approved" class="accreditation-logo" />
+  </div>
+</div>
+       
+  </header>
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+  <ul>
+    <li><a href="C:\Users\Lenovo\Desktop\webdev\csm.html" onclick="showPage('home')"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="C:\Users\Lenovo\Desktop\webdev\aimers.html" onclick="showPage('aimer-club')"><i class="fas fa-user-friends"></i> Aimer's Club</a></li>
+
+    <!-- Dropdown for Research Papers -->
+    <li class="dropdown">
+      <a href="#research-papers" onclick="showPage('research-papers')"><i class="fas fa-file-alt"></i> Research Papers</a>
+      <div class="dropdown-content">
+        <a href="#">Paper 1</a>
+        <a href="#">Paper 2</a>
+        <a href="#">Paper 3</a>
+      </div>
+    </li>
+
+    <li><a href="C:\Users\Lenovo\Desktop\webdev\faculty.html" onclick="showPage('faculty')"><i class="fas fa-chalkboard-teacher"></i> Faculty</a></li>
+
+    <!-- Dropdown for Achievements -->
+    <li class="dropdown">
+      <a href="#achievements" onclick="showPage('achievements')"><i class="fas fa-award"></i> Achievements</a>
+      <div class="dropdown-content">
+        <a href="#">Awards</a>
+        <a href="#">Projects</a>
+        </div>
+    </li>
+
+    <li><a href="#placements" onclick="showPage('placements')"><i class="fas fa-briefcase"></i> Placements</a></li>
+
+    <!-- Dropdown for Curriculum -->
+    <li class="dropdown">
+      <a href="#curriculum" onclick="showPage('curriculum')"><i class="fas fa-book"></i> Curriculum</a>
+      <div class="dropdown-content">
+        <a href="#">Semester 1</a>
+        <a href="#">Semester 2</a>
+        <a href="#">Semester 3</a>
+      </div>
+    </li>
+
+    <!-- Dropdown for Model Papers -->
+    <li class="dropdown">
+  <a href="#model-papers" onclick="showPage('model-papers')"><i class="fas fa-file"></i> Model Question Papers</a>
+  <div class="dropdown-content">
+    
+    <!-- First Year Dropdown -->
+    <div class="dropdown-submenu">
+      <a href="javascript:void(0);" onclick="toggleDropdown('firstYear')">First Year</a>
+      <div class="dropdown-subcontent" id="firstYear" style="display: none;">
+        <a href="#">Semester 1</a>
+        <a href="#">Semester 2</a>
+      </div>
+    </div>
+    
+    <!-- Second Year Dropdown -->
+    <div class="dropdown-submenu">
+      <a href="javascript:void(0);" onclick="toggleDropdown('secondYear')">Second Year</a>
+      <div class="dropdown-subcontent" id="secondYear" style="display: none;">
+        <a href="#">Semester 1</a>
+        <a href="#">Semester 2</a>
+      </div>
+    </div>
+    
+    <!-- Third Year Dropdown -->
+    <div class="dropdown-submenu">
+      <a href="javascript:void(0);" onclick="toggleDropdown('thirdYear')">Third Year</a>
+      <div class="dropdown-subcontent" id="thirdYear" style="display: none;">
+        <a href="#">Semester 1</a>
+        <a href="#">Semester 2</a>
+      </div>
+    </div>
+    
+    <!-- Fourth Year Dropdown -->
+    <div class="dropdown-submenu">
+      <a href="javascript:void(0);" onclick="toggleDropdown('fourthYear')">Fourth Year</a>
+      <div class="dropdown-subcontent" id="fourthYear" style="display: none;">
+        <a href="#">Semester 1</a>
+        <a href="#">Semester 2</a>
+      </div>
+    </div>
+    
+  </div>
+</li>
+
+<script>
+  // Function to toggle visibility of dropdown content
+  function toggleDropdown(id) {
+    var content = document.getElementById(id);
+    if (content.style.display === "none" || content.style.display === "") {
+      content.style.display = "block";
+    } else {
+      content.style.display = "none";
+    }
+  }
+</script>
+
+    <!-- Dropdown for Contact Us -->
+<li class="dropdown">
+  <a href="#contact" onclick="showPage('contact')"><i class="fas fa-envelope"></i> Contact Us</a>
+  <div class="dropdown-content">
+    <a href="#"><i class="fas fa-map-marker-alt"></i> Madhurawada, Visakhapatnam-530048, AP, India</a>
+    <a href="#"><i class="fas fa-phone"></i> +91-891-2739144 / 2719124 / 2719125 / 2719127</a>
+    <a href="#"><i class="fas fa-fax"></i> +91-891-2526639</a>
+    <a href="#"><i class="fas fa-envelope"></i> gvpcew@gmail.com, info@gvpcew.ac.in</a>
+  </div>
+</li>
+<!-- Search Bar -->
+      <li class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </li>
+    </ul>
+  </nav>
+  </ul>
+</nav>
+
+   <!-- New Slide for Hero Banner -->
+  
+  
+    <h1>Computer Science & Engineering (AI & ML) Faculty</h1>
+ 
+  <main>
+    <section class="faculty-directory">
+      <table>
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Qualification</th>
+            <th>Designation</th>
+            <th>Contact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Prof. Dr. M.R.K. Krishna Rao</td>
+            <td><a href="mailto:krishna@gvpcew.ac.in">krishna@gvpcew.ac.in</a></td>
+            <td>Ph.D (TIFR, Bombay)</td>
+            <td>Professor</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dr. Dwiti Krishna Bebarta</td>
+            <td><a href="mailto:dkbebarta@gmail.com">dkbebarta@gmail.com</a></td>
+            <td>M.Tech., Ph.D</td>
+            <td>Associate Professor & HOD</td>
+            <td>9381343954</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dr. K. Purushotham Naidu</td>
+            <td><a href="mailto:kpnaidu@gvpcew.ac.in">kpnaidu@gvpcew.ac.in</a></td>
+            <td>B.Tech., M.Tech., Ph.D</td>
+            <td>Assistant Professor</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Ms. D B Santhoshi</td>
+            <td><a href="mailto:santhoshi@gvpcew.ac.in">santhoshi@gvpcew.ac.in</a></td>
+            <td>B.Tech., M.Tech.</td>
+            <td>Assistant Professor</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Mrs. H Gouthami</td>
+            <td><a href="mailto:gouthami@gvpcew.ac.in">gouthami@gvpcew.ac.in</a></td>
+            <td>B.Tech., M.Tech.</td>
+            <td>Assistant Professor</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Mr. P Siva</td>
+            <td><a href="mailto:shiva.p@gvpcew.ac.in">shiva.p@gvpcew.ac.in</a></td>
+            <td>B.Tech., M.Tech.</td>
+            <td>Assistant Professor</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

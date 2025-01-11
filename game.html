@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Q&A Game</title>
+  <link rel="stylesheet" href="style_game.css">
+</head>
+<body>
+
+  <!-- Home Page -->
+  <div class="home-container">
+    <h1>Hi</h1>
+    <p class="intro">Test how well we know each other with funny questions and see who scores the highest! Are you ready for some laughs and memories?</p>
+    <button id="start-btn" onclick="startGame()">Start Game</button>
+  </div>
+
+  <!-- Game Page (hidden initially) -->
+  <div class="game-container" style="display: none;">
+    <h1>Fun Q&A Game</h1>
+    <p id="question"></p> <!-- Question will appear here -->
+    <div id="answer-choices"></div> <!-- Answer choices will appear here -->
+    <button id="submit-btn" onclick="submitAnswer()">Submit Answer</button>
+    <p id="feedback"></p>
+    <button id="next-btn" onclick="nextQuestion()" style="display: none;">Next Question</button>
+  </div>
+
+  <script src="jsforgame.js"></script>
+</body>
+</html>
